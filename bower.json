@@ -1,0 +1,13 @@
+{
+    "name": "lineman-angular-ui-bootstrap",
+    "version": "0.0.1",
+    "main": "path/to/main.css",
+    "ignore": [
+        ".jshintrc"
+    ],
+    "dependencies": {
+        "angular": "1.2.9",
+        "angular-bootstrap": "0.6.0"
+    },
+    "devDependencies": {}
+}

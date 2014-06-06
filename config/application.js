@@ -24,19 +24,21 @@ module.exports = function(lineman) {
     // }
 
     server: {
-      pushState: true
+        //disabled to fix - Required config property "server.apiProxy.prefix" missing.
+        pushState: false,
+
       // API Proxying
       //
       // During development, you'll likely want to make XHR (AJAX) requests to an API on the same
       // port as your lineman development server. By enabling the API proxy and setting the port, all
       // requests for paths that don't match a static asset in ./generated will be forwarded to
       // whatever service might be running on the specified port.
-      //
-      // apiProxy: {
-      //   enabled: true,
-      //   host: 'localhost',
-      //   port: 3000
-      // }
+
+      apiProxy: {
+         enabled: true,
+         host: 'localhost',
+         port: 3000
+      }
     }
 
     // Sass
