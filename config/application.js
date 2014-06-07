@@ -11,7 +11,7 @@
  *   $ lineman config #=> to print the entire config
  *   $ lineman config concat.js #=> to see the JS config for the concat task.
  */
-module.exports = function(lineman) {
+module.exports = function (lineman) {
   //Override application configuration here. Common examples follow in the comments.
   return {
     // grunt-angular-templates assumes your module is named "app", but
@@ -24,8 +24,8 @@ module.exports = function(lineman) {
     // }
 
     server: {
-        //disabled to fix - Required config property "server.apiProxy.prefix" missing.
-        pushState: false,
+      //disabled to fix - Required config property "server.apiProxy.prefix" missing.
+      pushState: false,
 
       // API Proxying
       //
@@ -35,12 +35,12 @@ module.exports = function(lineman) {
       // whatever service might be running on the specified port.
 
       apiProxy: {
-         enabled: true,
-         host: 'localhost',
-         port: 3000,
-         //prefix: 'api/v1'
+        enabled: true,
+        host: 'localhost',
+        port: 3000,
+        //prefix: 'api/v1'
       }
-    }
+    },
 
     // Sass
     //
@@ -57,6 +57,28 @@ module.exports = function(lineman) {
     // via grunt-asset-fingerprint
     //
     // enableAssetFingerprint: true
+
+    webfonts: {
+      files: {
+        "vendor/bower/bootstrap/dist/fonts": "vendor/bower/bootstrap/dist/fonts/**/*",
+        "vendor/bower/font-awesome/fonts": "vendor/bower/font-awesome/fonts/**/*"
+      }
+    },
+
+    pages: {
+      dev: {
+        context: {
+          apiUrl: "http://localhost:3000"
+        }
+      },
+      dist: {
+        context: {
+          // TODO: set production value
+          // TODO: fix node environment variables in heroku lineman buildpack
+          apiUrl: "<%= (process.env.LINEMAN_API_URL || 'http://ng-rails-stack.herokuapp.com') %>"
+        }
+      }
+    },
 
   };
 };
