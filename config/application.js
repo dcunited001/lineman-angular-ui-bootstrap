@@ -37,7 +37,8 @@ module.exports = function(lineman) {
       apiProxy: {
          enabled: true,
          host: 'localhost',
-         port: 3000
+         port: 3000,
+         //prefix: 'api/v1'
       }
     }
 
