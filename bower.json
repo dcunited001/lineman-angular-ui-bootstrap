@@ -6,8 +6,15 @@
         ".jshintrc"
     ],
     "dependencies": {
-        "angular": "1.2.9",
-        "angular-bootstrap": "0.6.0"
+        "bootstrap": "~3.1.x",
+        "underscore": "~1.5.x",
+        "underscore.string": "~2.3.x",
+        "angular": "~1.2.x",
+        "angular-cookies": "~1.2.x",
+        "angular-route": "~1.2.x",
+        "angular-resource": "~1.2.x",
+        "angular-ui-router": "~0.2.x",
+        "angular-bootstrap": "~0.11.x"
     },
     "devDependencies": {}
 }

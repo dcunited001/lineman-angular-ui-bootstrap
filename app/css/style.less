@@ -16,3 +16,64 @@ body {
   }
 }
 
+/* CSS fixes for footer
+-------------------------------------------------- */
+
+body > .container {
+  /* NOTE: not really sure why i had to cheat with the bottom padding here! */
+  padding: 60px 15px 60px;
+}
+
+#footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.container .text-muted {
+  margin: 20px 0;
+}
+
+.font-title {
+  font-family: 'Sonsie One', Helvetica, Arial, sans-serif;
+}
+
+/* Social buttons
+--------------------------------------------------
+*/
+a.share-icon:hover {
+  text-decoration: none;
+}
+
+/* External Fonts
+--------------------------------------------------
+  open fonts here: https://www.google.com/fonts
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Sonsie+One|Roboto:400italic,700italic,700,400);
+
+/* Bootstrap Theme Configuration
+--------------------------------------------------
+  originally, this was in a separate file: app/css/bootstrap/theme.less
+    but this was a little complicated and was a hack anyways:
+    the generated file was in app/css/bootstrap/theme.less.css
+    and was only concatenated into app.less.css because of the wildcard
+    app/css/ * * /*.css.  i like the single-file asset result, but i dont
+    want generated files in the repo.
+
+  override variables.less here (less delays evalation of vars)
+  find var values in vendor/bower/bootstrap/less/variables.less
+*/
+
+@import "../../vendor/bower/bootstrap/less/theme.less";
+@import "../../vendor/bower/bootstrap/less/bootstrap.less";
+
+/*@brand-primary: #ABCDEF;*/
+
+/*set custom font*/
+@font-family-sans-serif:  'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+/*changing the base font size doesn't affect all fonts evenly*/
+@font-size-base:          14px;
+
+/*set font-awesome glyphs*/
+@icon-font-name:          "fontawesome-webfont";
