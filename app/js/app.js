@@ -1,4 +1,4 @@
-var app = angular.module("RailsStackApp",
+var app = angular.module("app",
     ['ngRoute',
         'ngCookies',
         'ngResource',
