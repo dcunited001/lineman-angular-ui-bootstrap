@@ -1,26 +1,40 @@
-
-<div class="navbar-inner">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container-fluid">
-    <button type="button" data-toggle="collapse" data-target=".nav-collapse" class="btn btn-navbar"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="/#/home" class="brand">Angular Rails</a>
-    <div ng-switch="loggedIn" class="nav-collapse collapse">
-      <ul ng-switch-when="true" class="nav">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle"  ng-init="navCollapsed=true" ng-click="navCollapsed=!navCollapsed">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <!-- TODO: extract site title -->
+      <a class="navbar-brand font-title" href="/#/home">&#x2605;&nbsp;ng-rails&nbsp;&#x2605;</a>
+    </div>
+
+    <div ng-switch="loggedIn" collapse="navCollapsed" class="collapse navbar-collapse navbar-responsive-collapse">
+      <!--<a href="/join.html" class="btn btn-danger navbar-btn">Join Now!</a>-->
+      <ul ng-switch-when="true" class="nav navbar-nav">
         <li ng-class="{ active: isActive('/home') }"><a href="/#/home">Home</a></li>
         <li ng-class="{ active: isActive('/users') }"><a href="/#/users">Users</a></li>
         <li ng-class="{ active: isActive('/foo') }"><a href="/#/foo">Foo</a></li>
         <li ng-class="{ active: isActive('/bar') }"><a href="/#/bar">Bar</a></li>
         <li ng-class="{ active: isActive('/baz') }"><a href="/#/baz">Baz</a></li>
       </ul>
-      <ul ng-switch-default="ng-switch-default" class="nav">
+
+      <ul ng-switch-default="ng-switch-default" class="nav navbar-nav">
         <li ng-class="{ active: isActive('/home') }"><a href="/#/home">Home</a></li>
         <li ng-class="{ active: isActive('/features') }"><a href="/#/features">Features</a></li>
         <li ng-class="{ active: isActive('/explore') }"><a href="/#/explore">Explore</a></li>
       </ul>
-    </div>
-    <div ng-if="loggedIn" class="pull-right">
-      <div user-profile-widget="user-profile-widget" class="btn-group"></div>
-    </div>
-    <div ng-if="!(loggedIn)" class="pull-right">
-      <div signup-login-widget="signup-login-widget" class="btn-group"></div>
+
+      <div ng-if="loggedIn" class="navbar-right">
+        <div user-profile-widget class="btn-group"></div>
+      </div>
+
+      <div ng-if="!(loggedIn)" class="navbar-right">
+        <div signup-login-widget class="btn-group"></div>
+      </div>
+
     </div>
   </div>
-</div>
+</nav>

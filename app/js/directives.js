@@ -32,10 +32,3 @@ app.directive('navbarWidget', function() {
         templateUrl: 'directives/navbar-widget.html'
     };
 });
-
-app.directive('sidebarWidget', function() {
-    return {
-        controller: "SidebarCtrl",
-        templateUrl: 'directives/sidebar-widget.html'
-    };
-});
