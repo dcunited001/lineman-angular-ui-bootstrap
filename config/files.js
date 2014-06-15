@@ -10,14 +10,14 @@ module.exports = function (lineman) {
   return {
     js: {
       vendor: [
-        "bower_components/underscore/underscore.js",
-        "bower_components/underscore.string/lib/underscore.string.js",
-        "bower_components/angular/angular.js",
-        "bower_components/angular-cookies/angular-cookies.js",
-        "bower_components/angular-route/angular-route.js",
-        "bower_components/angular-resource/angular-resource.js",
-        "bower_components/angular-bootstrap/ui-bootstrap-tpls.js",
-        "bower_components/angular-ui-router/release/angular-ui-router.js"
+        "vendor/bower/underscore/underscore.js",
+        "vendor/bower/underscore.string/lib/underscore.string.js",
+        "vendor/bower/angular/angular.js",
+        "vendor/bower/angular-cookies/angular-cookies.js",
+        "vendor/bower/angular-route/angular-route.js",
+        "vendor/bower/angular-resource/angular-resource.js",
+        "vendor/bower/angular-bootstrap/ui-bootstrap-tpls.js",
+        "vendor/bower/angular-ui-router/release/angular-ui-router.js"
       ],
       app: [
         "app/js/app.js",
@@ -37,7 +37,7 @@ module.exports = function (lineman) {
     less: {
       compile: {
         options: {
-          paths: ["bower_components/normalize-css/normalize.css", "bower_components/font-awesome/css/font-awesome.css", "app/css/**/*.less"]
+          paths: ["vendor/bower/normalize-css/normalize.css", "vendor/bower/font-awesome/css/font-awesome.css", "app/css/**/*.less"]
         }
       }
     }

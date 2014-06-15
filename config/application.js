@@ -60,8 +60,8 @@ module.exports = function (lineman) {
 
     webfonts: {
       files: {
-        "bower_components/bootstrap/dist/fonts": "vendor/bower/bootstrap/dist/fonts/**/*",
-        "bower_components/font-awesome/fonts": "vendor/bower/font-awesome/fonts/**/*"
+        "vendor/bower/bootstrap/dist/fonts": "vendor/bower/bootstrap/dist/fonts/**/*",
+        "vendor/bower/font-awesome/fonts": "vendor/bower/font-awesome/fonts/**/*"
       }
     },
 
