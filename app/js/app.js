@@ -28,13 +28,6 @@ var app = angular.module("app",
         $urlRouterProvider.otherwise('/login');
 
         $stateProvider
-            //TODO: fix login page for mobile users?
-            .state('login', {
-                url: "/login",
-                templateUrl: "login.html",
-                controller: 'LoginCtrl'
-            })
-
             .state('home', {
                 url: "/home",
                 templateUrl: "home.html",

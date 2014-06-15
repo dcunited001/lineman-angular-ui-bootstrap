@@ -8,7 +8,7 @@
     <input type="text" name="username" placeholder="Username" ng-model="signup.username" required="required"/>
     <input type="password" name="password" placeholder="Password" ng-model="signup.password" required="required"/>
     <input type="password" name="passwordConfirmation" placeholder="Confirm" ng-model="signup.passwordConfirmation" required="required"/>
-    <div class="row-fluid">
+    <div class="row">
       <alert ng-repeat="alert in signupAlerts" type="alert.type" close="closeAlert($index)">{{alert.msg}}</alert>
     </div>
   </div>
