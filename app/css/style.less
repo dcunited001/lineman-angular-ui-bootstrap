@@ -61,8 +61,6 @@ a.share-icon:hover {
 
 //TODO: add file as local asset
 @import url(https://fonts.googleapis.com/css?family=Sonsie+One|Roboto:400italic,700italic,700,400);
-@import (less) "../../vendor/bower/normalize-css/normalize.css";
-@import (less) "../../vendor/bower/font-awesome/css/font-awesome.css";
 
 /* Bootstrap Theme Configuration
 --------------------------------------------------
@@ -88,5 +86,9 @@ a.share-icon:hover {
 /*changing the base font size doesn't affect all fonts evenly*/
 @font-size-base:          14px;
 
-/*set font-awesome glyphs*/
-@icon-font-name:          "fontawesome-webfont";
+/*
+  set font-awesome glyphs
+  - however fontawesome-webfont content codes don't match
+*/
+//@icon-font-path: "../fonts/";
+//@icon-font-name: "fontawesome-webfont";

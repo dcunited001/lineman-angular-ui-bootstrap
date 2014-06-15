@@ -34,6 +34,13 @@ module.exports = function (lineman) {
       root: "fonts"
     },
 
+    css: {
+      vendor: [
+        "vendor/bower/normalize-css/normalize.css",
+        "vendor/bower/font-awesome/css/font-awesome.css"
+      ]
+    },
+
     less: {
       compile: {
         options: {

@@ -39,6 +39,10 @@ module.exports = function (lineman) {
         host: 'localhost',
         port: 3000,
         //prefix: 'api/v1'
+      },
+
+      staticRoutes: {
+        '/stylesheets/fonts': 'fonts'
       }
     },
 
