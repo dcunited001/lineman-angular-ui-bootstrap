@@ -37,7 +37,7 @@ module.exports = function (lineman) {
     less: {
       compile: {
         options: {
-          paths: ["vendor/bower/normalize-css/normalize.css", "vendor/bower/font-awesome/css/font-awesome.css", "app/css/**/*.less"]
+          paths: ["app/css/**/*.less"]
         }
       }
     }
