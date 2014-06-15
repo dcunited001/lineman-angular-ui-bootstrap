@@ -30,6 +30,16 @@ module.exports = function (lineman) {
       ]
     },
 
+    css: {
+      vendor: [
+        "bower_components/font-awesome/css/font-awesome.css"
+      ]
+    },
+
+    webfonts: {
+      root: "fonts"
+    },
+
     less: {
       compile: {
         options: {
