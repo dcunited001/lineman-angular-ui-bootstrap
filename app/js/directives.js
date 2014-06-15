@@ -16,26 +16,26 @@ app.directive("showsMessageWhenHovered", function() {
 
 app.directive('signupLoginWidget', function() {
     return {
-        templateUrl: 'angular/directives/signup-login-widget.html'
+        templateUrl: 'directives/signup-login-widget.html'
     };
 });
 
 app.directive('userProfileWidget', function() {
     return {
-        templateUrl: 'angular/directives/user-profile-widget.html'
+        templateUrl: 'directives/user-profile-widget.html'
     };
 });
 
 app.directive('navbarWidget', function() {
     return {
         controller: 'NavbarCtrl',
-        templateUrl: 'angular/directives/navbar-widget.html'
+        templateUrl: 'directives/navbar-widget.html'
     };
 });
 
 app.directive('sidebarWidget', function() {
     return {
         controller: "SidebarCtrl",
-        templateUrl: 'angular/directives/sidebar-widget.html'
+        templateUrl: 'directives/sidebar-widget.html'
     };
 });

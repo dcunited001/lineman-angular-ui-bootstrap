@@ -31,31 +31,31 @@ var app = angular.module("app",
             //TODO: fix login page for mobile users?
             .state('login', {
                 url: "/login",
-                templateUrl: "angular/login.html",
+                templateUrl: "login.html",
                 controller: 'LoginCtrl'
             })
 
             .state('home', {
                 url: "/home",
-                templateUrl: "angular/home.html",
+                templateUrl: "home.html",
                 controller: 'HomeCtrl'
             })
 
             .state('explore', {
                 url: "/explore",
-                templateUrl: "angular/explore.html",
+                templateUrl: "explore.html",
                 controller: 'HomeCtrl'
             })
 
             .state('features', {
                 url: "/features",
-                templateUrl: "angular/features.html",
+                templateUrl: "features.html",
                 controller: 'HomeCtrl'
             })
 
             .state('error', {
                 url: "/error",
-                templateUrl: "angular/error.html",
+                templateUrl: "error.html",
                 controller: 'HomeCtrl'
             })
 
@@ -63,7 +63,7 @@ var app = angular.module("app",
 
             .state('usersIndex', {
                 url: "/users",
-                templateUrl: "angular/users.html",
+                templateUrl: "users.html",
                 controller: "UsersIndexCtrl"
             });
 

@@ -31,7 +31,7 @@ app.controller("NavbarCtrl", function($scope, $location, $modal, AuthenticationS
     $scope.openSignupModal = function() {
 
         var modalInstance = $modal.open({
-            templateUrl: 'angular/modals/signup-modal.html',
+            templateUrl: 'modals/signup-modal.html',
             controller: 'SignupModalCtrl',
             resolve: {
                 signup: function () {
@@ -72,7 +72,7 @@ app.controller("NavbarCtrl", function($scope, $location, $modal, AuthenticationS
     $scope.openLoginModal = function() {
 
         var modalInstance = $modal.open({
-            templateUrl: 'angular/modals/login-modal.html',
+            templateUrl: 'modals/login-modal.html',
             controller: 'LoginModalCtrl',
             resolve: {
                 creds: function() {
