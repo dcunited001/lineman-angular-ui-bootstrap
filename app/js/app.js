@@ -25,7 +25,7 @@ var app = angular.module("app",
         // TODO: enable pushstate (fix heroku lineman build pack)
         // $locationProvider.html5Mode(true);
 
-        $urlRouterProvider.otherwise('/login');
+        $urlRouterProvider.otherwise('/home');
 
         $stateProvider
             .state('home', {
@@ -123,7 +123,7 @@ var app = angular.module("app",
             if (!routeClean($location.url()) && !AuthenticationService.isLoggedIn()) {
                 // redirect back to login
                 ev.preventDefault();
-                $location.path('/login');
+                $location.path('/home');
             }
 
         });
