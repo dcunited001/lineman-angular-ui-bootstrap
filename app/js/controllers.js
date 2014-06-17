@@ -1,6 +1,6 @@
 app.controller('HomeCtrl', function($scope, $location, AuthenticationService) {
     $scope.title = "Home";
-    $scope.message = "Mouse Over these images to see a directive at work";
+    $scope.message = "Try mousing over elements to see a directive at work";
 
     var onLogoutSuccess = function(response) {
         alert(response.message);
