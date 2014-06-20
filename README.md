@@ -1,3 +1,12 @@
+# A Containerized AngularJS Single-Page App Template with Bootstrap and AngularUI
+
+[![Build Status](https://travis-ci.org/linemanjs/lineman-angular-template.png?branch=master)](https://travis-ci.org/linemanjs/lineman-angular-template)
+
+## TODO
+- TODO: Configure Travis and update build status
+- TODO: get poltergeist working with AngularJS
+- TODO: fix modal forms - they run validation even when cancel is clicked
+
 # A Lineman JS Template using Angular
 
 [![Build Status](https://travis-ci.org/linemanjs/lineman-angular-template.png?branch=master)](https://travis-ci.org/linemanjs/lineman-angular-template)
