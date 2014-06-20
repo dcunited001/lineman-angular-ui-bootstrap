@@ -126,12 +126,6 @@ app.controller("LoginModalCtrl", function($scope, $modalInstance, creds, Authent
     };
 });
 
-app.controller("SidebarCtrl", function($scope, $location) {
-    // $scope.isActive = function(viewLocation) {
-    //   return viewLocation === $location.path();
-    // };
-});
-
 app.controller('LoginCtrl', function($scope, $location, AuthenticationService) {
     $scope.credentials = { username: "", password: "" };
 

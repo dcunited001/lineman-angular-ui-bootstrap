@@ -6,6 +6,9 @@
 - TODO: Configure Travis and update build status
 - TODO: get poltergeist working with AngularJS
 - TODO: fix modal forms - they run validation even when cancel is clicked
+- TODO: ui-bootstrap HTML Popovers 
+  - add a templateUrl and setup promises to resolve template, like bootstrap $modal
+  - copy over the template/popover/popover.html from ui-bootstrap then transclude the popover template inside this
 
 # A Lineman JS Template using Angular
 
