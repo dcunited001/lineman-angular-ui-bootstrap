@@ -3,7 +3,7 @@ app.factory('RegistrationService', function($http) {
 
     return {
         signup: function(params, success, error) {
-            return $http.post(apiUrl + '/api/users.json', { user: params })
+            return $http.post(apiUrl + '/api/v1/users.json', { user: params }, { method: 'post' })
                 .success(success)
                 .error(error);
         }
@@ -16,7 +16,7 @@ app.factory('AuthenticationService', function($http, SessionService) {
     // these routes map to stubbed API endpoints in config/server.js
     return {
         login: function(creds, success, error) {
-            return $http.post(apiUrl + '/api/login.json', {
+            return $http.post(apiUrl + '/api/v1/login.json', {
                 user: creds
             }).success(function(res) {
                 SessionService.currentUser = creds.email;
@@ -28,7 +28,7 @@ app.factory('AuthenticationService', function($http, SessionService) {
         },
 
         logout: function(success, error) {
-            return $http.post(apiUrl + '/api/logout.json', {
+            return $http.post(apiUrl + '/api/v1/logout.json', {
                 format: 'json'
             }).then(function(res) {
                 SessionService.currentUser = null;
@@ -52,7 +52,7 @@ app.factory('SessionService', function () {
 });
 
 app.factory('Users', function($resource) {
-    return $resource(apiUrl + '/api/users', { format: 'json' });
+    return $resource(apiUrl + '/api/v1/users', { format: 'json' });
 });
 
 // .factory('Devices', ['$resource', function($resource){
