@@ -28,10 +28,10 @@
       </ul>
 
       <div ng-if="loggedIn" class="navbar-right">
-        <div user-profile-widget class="btn-group"></div>
+        <div user-profile-widget class="btn-group" id="user-profile-widget"></div>
       </div>
 
-      <div ng-if="!(loggedIn)" class="navbar-right">
+      <div ng-if="!(loggedIn)" class="navbar-right" id="signup-login-widget">
         <div signup-login-widget class="btn-group"></div>
       </div>
 
