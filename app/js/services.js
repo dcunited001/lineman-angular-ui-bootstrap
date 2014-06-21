@@ -54,10 +54,3 @@ app.factory('SessionService', function () {
 app.factory('Users', function($resource) {
     return $resource(apiUrl + '/api/v1/users', { format: 'json' });
 });
-
-// .factory('Devices', ['$resource', function($resource){
-//    return $resource('http://localhost\\:3000/devices/:deviceId',
-//        {},
-//        {update: {method:'PUT'}, isArray:false}
-//        );
-//  }]);

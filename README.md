@@ -9,6 +9,14 @@
 - TODO: ui-bootstrap HTML Popovers 
   - add a templateUrl and setup promises to resolve template, like bootstrap $modal
   - copy over the template/popover/popover.html from ui-bootstrap then transclude the popover template inside this
+- TODO: until users login, routes they don't have access to redirect them to a page with the login modal open
+- TODO: update angular-ui href links with ui-router sref's?
+- TODO: updated modal-header background color (use bg-primary and figure out something for rounded corners)
+- TODO: fix footer ... SMH
+- TODO: fix ui-bootstrap alerts in login/signup modals alert-error should be alert-danger
+
+## References
+- [Diving Deep into the Angular Router](http://www.ng-newsletter.com/posts/angular-ui-router.html)
 
 # A Lineman JS Template using Angular
 
