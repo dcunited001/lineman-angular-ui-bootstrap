@@ -10,45 +10,70 @@ app.factory('RegistrationService', function($http) {
     };
 });
 
-app.factory('AuthenticationService', function($http, SessionService) {
+app.factory('AuthenticationService', function($http, Session) {
     'use strict';
 
-    // these routes map to stubbed API endpoints in config/server.js
+  //TODO: replace currentUser
     return {
-        login: function(creds, success, error) {
-            return $http.post(apiUrl + '/api/v1/login.json', {
-                user: creds
-            }).success(function(res) {
-                SessionService.currentUser = creds.email;
-                success(res);
-            }).error(function(res) {
-                SessionService.currentUser = null;
-                error(res);
-            });
-        },
-
-        logout: function(success, error) {
-            return $http.post(apiUrl + '/api/v1/logout.json', {
-                format: 'json'
-            }).then(function(res) {
-                SessionService.currentUser = null;
-                success(res);
-            }, error);
-        },
-
-        isLoggedIn: function () {
-            return SessionService.currentUser !== null;
+      login: function (credentials, success, error) {
+        return $http.post(apiUrl + '/api/v1/login.json', {
+          user: credentials
+        }).success(function(res) {
+          if (res.user) {
+            Session.create(null, res.user.id, res.user.email, res.user.username);
+          }
+          success(res);
+        }).error(function(res) {
+          // TODO: destroy session if auth failure?
+          Session.destroy();
+          error(res);
+        });
+      },
+      logout: function(success, error) {
+        return $http.post(apiUrl + '/api/v1/logout.json', {
+        }).success(function(res) {
+          Session.destroy();
+          success(res);
+        }).error(function(res) {
+          //TODO: destroy session on logout error?
+          Session.destroy();
+          error(res);
+        });
+      },
+      isAuthenticated: function () {
+        console.log(Session)
+        return !!Session.userId;
+      },
+      isAuthorized: function (authorizedRoles) {
+        if (!angular.isArray(authorizedRoles)) {
+          authorizedRoles = [authorizedRoles];
         }
+        return (this.isAuthenticated() &&
+            authorizedRoles.indexOf(Session.userRole) !== -1);
+      }
     };
 
 });
 
-app.factory('SessionService', function () {
-    'use strict';
+app.service('Session', function () {
+  this.create = function (sessionId, userId, email, username) {
+    // TODO: sessionId
+    // TODO: users' roles
+    this.id = userId;
+    this.userId = userId;
+    this.email = email;
+    this.username = username;
+    //this.userRole = userRole;
+  };
 
-    return {
-        currentUser: null
-    };
+    'use strict';
+  this.destroy = function () {
+    this.id = null;
+    this.userId = null;
+    this.email = null;
+    this.username = null;
+  };
+  return this;
 });
 
 app.factory('Users', function($resource) {

@@ -13,10 +13,17 @@
 - TODO: update angular-ui href links with ui-router sref's?
 - TODO: updated modal-header background color (use bg-primary and figure out something for rounded corners)
 - TODO: fix footer ... SMH
-- TODO: fix ui-bootstrap alerts in login/signup modals alert-error should be alert-danger
+- TODO: fix ui-bootstrap alerts in login/signup modals alert-error should be alert-danger, patched for now
+- TODO: updated AuthenticationService to persist until logout
 
 ## References
+Routing
 - [Diving Deep into the Angular Router](http://www.ng-newsletter.com/posts/angular-ui-router.html)
+
+Authentication
+- [Auth with AngularJS](https://medium.com/@mattlanham/authentication-with-angularjs-4e927af3a15f)
+- [Cookies vs Tokens](https://auth0.com/blog/2014/01/07/angularjs-authentication-with-cookies-vs-token/)
+- [Techniques for Auth in AngularJS](https://medium.com/opinionated-angularjs/techniques-for-authentication-in-angularjs-applications-7bbf0346acec)
 
 # A Lineman JS Template using Angular
 

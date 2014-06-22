@@ -91,7 +91,22 @@ var app = angular.module("app",
         //   $httpProvider.responseInterceptors.push(interceptor);
     })
 
-    .run(function($rootScope, $location, AuthenticationService, SessionService, $cookies) {
+    .constant('AUTH_EVENTS', {
+      loginSuccess: 'auth-login-success',
+      loginFailed: 'auth-login-failed',
+      logoutSuccess: 'auth-logout-success',
+      sessionTimeout: 'auth-session-timeout',
+      notAuthenticated: 'auth-not-authenticated',
+      notAuthorized: 'auth-not-authorized'
+    })
+
+    .constant('USER_ROLES', {
+      all: '*',
+      admin: 'admin',
+      guest: 'guest'
+    })
+
+    .run(function($rootScope, $location, AuthenticationService, Session, $cookies) {
 
         //==================
         // debugging
@@ -120,7 +135,7 @@ var app = angular.module("app",
 
         $rootScope.$on('$stateChangeStart', function (ev, to, toParams, from, fromParams) {
             // if route requires auth and user is not logged in
-            if (!routeClean($location.url()) && !AuthenticationService.isLoggedIn()) {
+            if (!routeClean($location.url()) && !AuthenticationService.isAuthenticated()) {
                 // redirect back to login
                 ev.preventDefault();
                 $location.path('/home');
