@@ -24,6 +24,8 @@ Authentication
 - [Auth with AngularJS](https://medium.com/@mattlanham/authentication-with-angularjs-4e927af3a15f)
 - [Cookies vs Tokens](https://auth0.com/blog/2014/01/07/angularjs-authentication-with-cookies-vs-token/)
 - [Techniques for Auth in AngularJS](https://medium.com/opinionated-angularjs/techniques-for-authentication-in-angularjs-applications-7bbf0346acec)
+- [10 Things you should know about tokens](https://auth0.com/blog/2014/01/27/ten-things-you-should-know-about-tokens-and-cookies/)
+- [Angular Auth](http://www.sitepoint.com/implementing-authentication-angular-applications/)
 
 # A Lineman JS Template using Angular
 

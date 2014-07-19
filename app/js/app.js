@@ -54,10 +54,16 @@ var app = angular.module("app",
 
             // authenticated routes
 
-            .state('usersIndex', {
-                url: "/users",
-                templateUrl: "users.html",
-                controller: "UsersIndexCtrl"
+            .state('users.index', {
+              url: "/users.index",
+              templateUrl: "users/index.html",
+              controller: "UsersIndexCtrl"
+            })
+
+            .state('foo', {
+              url: "/foo",
+              templateUrl: "foo.html",
+              controller: "FooCtrl"
             });
 
     })

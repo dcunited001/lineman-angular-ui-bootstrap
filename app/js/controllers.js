@@ -124,21 +124,7 @@ app.controller("LoginModalCtrl", function($scope, $modalInstance, creds, Authent
     };
 });
 
-app.controller('LoginCtrl', function($scope, $location, AuthenticationService) {
-    $scope.credentials = { username: "", password: "" };
-
-    var onLoginSuccess = function(res) {
-        alert(res.message);
-        $location.path('/home');
-    };
-
-    var onLoginFailure = function(res) {
-        alert(res.message);
-    };
-
-    $scope.login = function() {
-        AuthenticationService.login($scope.credentials, onLoginSuccess, onLoginFailure);
-    };
+app.controller('FooCtrl', function($scope, $location, AuthenticationService) {
 
 });
 
