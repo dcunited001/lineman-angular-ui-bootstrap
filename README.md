@@ -26,6 +26,8 @@ Authentication
 - [Techniques for Auth in AngularJS](https://medium.com/opinionated-angularjs/techniques-for-authentication-in-angularjs-applications-7bbf0346acec)
 - [10 Things you should know about tokens](https://auth0.com/blog/2014/01/27/ten-things-you-should-know-about-tokens-and-cookies/)
 - [Angular Auth](http://www.sitepoint.com/implementing-authentication-angular-applications/)
+- [Github Issue on using $httpProvider interceptor](https://github.com/angular-ui/ui-router/issues/1041) to redirect API 401 responses to a login page 
+- [Simple Auth for Angular.js App](http://beletsky.net/2013/11/simple-authentication-in-angular-dot-js-app.html) - Looks like there's some really good ideas here for later.
 
 # A Lineman JS Template using Angular
 

@@ -110,6 +110,10 @@ app.controller("SignupModalCtrl", function($scope, $modalInstance, signup, Regis
     };
 });
 
+app.controller("LoginCtrl", function($scope, $modalInstance, creds, AuthenticationService, Users) {
+
+});
+
 app.controller("LoginModalCtrl", function($scope, $modalInstance, creds, AuthenticationService, Users) {
     //TODO: fix white at bottom of modal bc of form
 
@@ -128,6 +132,6 @@ app.controller('FooCtrl', function($scope, $location, AuthenticationService) {
 
 });
 
-app.controller('UsersIndexCtrl', function($scope, Users) {
-    $scope.users = Users.query();
+app.controller('UsersCtrl', function($scope, Users) {
+  $scope.users = Users.query();
 });

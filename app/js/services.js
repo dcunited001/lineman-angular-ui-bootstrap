@@ -41,7 +41,7 @@ app.factory('AuthenticationService', function($http, Session) {
         });
       },
       isAuthenticated: function () {
-        console.log(Session)
+        console.log(Session);
         return !!Session.userId;
       },
       isAuthorized: function (authorizedRoles) {
@@ -54,6 +54,27 @@ app.factory('AuthenticationService', function($http, Session) {
     };
 
 });
+
+app.factory('httpInterceptor', function($q, $window, $location) {
+
+    return function(promise) {
+      var success = function(response) {
+        return response;
+      };
+
+      var error = function(response) {
+        if (response.status === 401) {
+          $location.url('/login');
+        }
+
+        return $q.reject(response);
+      };
+
+      return promise.then(success, error);
+    };
+
+});
+
 
 app.service('Session', function () {
   this.create = function (sessionId, userId, email, username) {

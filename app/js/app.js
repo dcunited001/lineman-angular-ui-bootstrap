@@ -52,10 +52,21 @@ var app = angular.module("app",
                 controller: 'HomeCtrl'
             })
 
+          //TODO: redirect unauthenticated routes to a login page,
+          // - but when trying to redirect to unauthenticated /users to /login,
+          //   - the users template still renders
+          // - routing to /home for now
+
+//            .state('login', {
+//                url: 'login',
+//                templateUrl: 'login.html',
+//                controller: 'LoginCtrl'
+//            })
+
             // authenticated routes
 
-            .state('users.index', {
-              url: "/users.index",
+            .state('users', {
+              url: "/users",
               templateUrl: "users/index.html",
               controller: "UsersIndexCtrl"
             })
@@ -64,11 +75,24 @@ var app = angular.module("app",
               url: "/foo",
               templateUrl: "foo.html",
               controller: "FooCtrl"
-            });
+            })
 
+            .state('bar', {
+              url: '/bar',
+              templateUrl: 'foo/bar.html',
+              controller: 'FooCtrl'
+            })
+
+            .state('baz', {
+              url: '/baz',
+              templateUrl: 'foo/baz.html',
+              controller: 'FooCtrl'
+            })
+      
     })
 
-    .config(function($httpProvider){
+    .config(function($locationProvider, $httpProvider){
+      $httpProvider.responseInterceptors.push('httpInterceptor');
 
         // if (angular.element('meta[name=csrf-token]'))
         // {
